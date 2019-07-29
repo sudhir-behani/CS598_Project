@@ -1,0 +1,67 @@
+# @begin Data_Cleaning_Assignment Project @desc NYPL DataSet CleanUp.
+# @in Menu.csv  @uri file://res/csv/Menu.csv
+# @in MenuItem.csv  @uri file://res/csv/MenuItem.csv
+# @in MenuPage.csv  @uri file://res/csv/MenuPage.csv
+# @in Dish.csv  @uri file://res/csv/Dish.csv
+
+#   @begin CleanedMenu @desc Clean Menu.csv with open refine
+#   @in Menu.csv @uri file://res/csv/Menu.csv
+#   @param cleanedMethods
+#   @out CleanedMenu.csv @uri file//res/csv/cleaned/Menu.csv
+#   @end CleanedMenu
+
+#   @begin CleanedMenuItem @desc Clean MenuItem.csv with open refine
+#   @in MenuItem.csv @uri file://res/csv/MenuItem.csv
+#   @param cleanedMethods
+#   @out CleanedMenuItem.csv @uri file//res/csv/cleaned/MenuItem.csv
+#   @end CleanedMenuItem
+
+#   @begin CleanedMenuPage @desc Clean MenuPage.csv with open refine
+#   @in MenuPage.csv @uri file://res/csv/MenuPage.csv
+#   @param cleanedMethods
+#   @out CleanedMenuPage.csv @uri file//res/csv/cleaned/MenuPage.csv
+#   @end CleanedMenuPage
+
+#   @begin CleanedDish @desc Clean Dish.csv with open refine
+#   @in Dish.csv @uri file://res/csv/Dish.csv
+#   @param cleanedMethods
+#   @out CleanedDish.csv @uri file//res/csv/cleaned/Dish.csv
+#   @end CleanedDish
+
+#   @begin SQLonCleanedMenu  @desc Use SQLLite to load Menu.csv into table \"Menu\" in nypl.db
+#   @in CleanedMenu.csv  @uri file//res/csv/cleaned/Menu.csv
+#   @param sqlLoadParams
+#   @out Menu-Table  @uri sqlite://nypl.db/Menu
+#   @end SQLonCleanedMenu
+
+#   @begin SQLonCleanedMenuItem  @desc Use SQLLite to load Menu.csv into table \"MenuItem\" in nypl.db
+#   @in CleanedMenuItem.csv  @uri file//res/csv/cleaned/MenuItem.csv
+#   @param sqlLoadParams
+#   @out MenuItem-Table  @uri sqlite://nypl.db/MenuItem
+#   @end SQLonCleanedMenuItem
+
+#   @begin SQLonCleanedMenuPage  @desc Use SQLLite to load Menu.csv into table Menu in nypl.db
+#   @in CleanedMenuPage.csv  @uri file//res/csv/cleaned/MenuPage.csv#   @param sqlLoadParams
+#   @out MenuPage-Table @uri sqlite://nypl.db/MenuPage#   @end SQLonCleanedMenuPage
+#   @begin SQLonCleanedDish  @desc Use SQLLite to load Menu.csv into table Menu in nypl.db
+#   @in CleanedDish.csv  @uri file//res/csv/cleaned/Dish.csv
+#   @param sqlLoadParams
+#   @out Dish-Table  @uri sqlite://nypl.db/Dish
+#   @end SQLonCleanedDish
+
+#   @begin sql-IC-Checks  @desc SQL Integrity Checks on Unique and NotNull values
+#   @in Menu-Table  @uri sqlite://nypl.db/Menu
+#   @in MenuItem-Table  @uri sqlite://nypl.db/MenuItem
+#   @in MenuPage-Table  @uri sqlite://nypl.db/MenuPage
+#   @in Dish-Table  @uri sqlite://nypl.db/Dish
+#   @param Integrity Checks Unique and NotNull
+#   @out Cleansed-Menu  @uri sqlite://nypl.db/Menu
+#   @out Cleansed_MenuItem  @uri sqlite://nypl.db/MenuItem
+#   @out Cleansed_MenuPage  @uri sqlite://nypl.db/MenuPage
+#   @out Cleansed_Dish  @uri sqlite://nypl.db/Dish
+#   @end sql-IC-Checks# @out Cleansed-Menu @uri sqlite://nypl.db/Memu
+
+# @out Cleansed_MenuItem @uri sqlite://nypl.db/MenuItem
+# @out Cleansed_MenuPage @uri sqlite://nypl.db/MenuPage
+# @out Cleansed_Dish @uri sqlite://nypl.db/Dish
+# @end Data_Cleaning_Assignment
